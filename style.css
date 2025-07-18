@@ -1,0 +1,113 @@
+body
+{
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.tube
+{
+    padding-top:50px;
+}
+
+button
+{
+    height: 25px;
+    width: 350px;
+    background-color: rgb(53, 53, 53);
+    border-radius: 5px;
+    border: 2px solid transparent;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+button::after
+{
+    content: '';
+    position: absolute;
+    height: 150%;
+    width: 102%;
+    background-color: rgba(255, 255, 255, 0.128);
+    border-radius: 2px;
+    transition: ease-in-out;
+    z-index: 0;
+    
+}
+
+button:hover
+{
+    
+    animation: flicker 1s linear forwards ;
+}
+
+@keyframes flicker
+{
+      0% 
+      {
+        box-shadow: 0 200px 200px  wheat , 0 -20px 200px  whitesmoke;
+        background-image: linear-gradient( to bottom , whitesmoke, wheat);
+      }
+      10% 
+      {
+        box-shadow: 0 0 200px  black , 0 0 200px  black;
+        background-image: linear-gradient( to bottom , rgb(0, 0, 0), rgb(0, 0, 0));
+      }
+      20% 
+      {
+       box-shadow: 0 0 200px  black , 0 0 200px  black;
+       background-image: linear-gradient( to bottom , rgb(0, 0, 0), rgb(0, 0, 0));
+      }
+      30% 
+      {
+        box-shadow: 0 0 200px  black , 0 0 200px  black;
+        background-image: linear-gradient( to bottom , rgb(0, 0, 0), rgb(0, 0, 0));
+      }
+      35% 
+      {
+        box-shadow: 0 200px 200px  wheat , 0 -20px 200px  whitesmoke;
+        background-image: linear-gradient( to bottom , whitesmoke, wheat);
+      }
+      40% 
+      {
+        box-shadow:  0 0px 200px  black ,  0 0 200px  black;
+        background-image: linear-gradient( to bottom , rgb(0, 0, 0), rgb(0, 0, 0));
+      }
+      50% 
+      {
+        box-shadow: 0 200px 200px  wheat , 0 -20px 200px  whitesmoke;
+        background-image: linear-gradient( to bottom , whitesmoke, wheat);
+      }
+      60% 
+      {
+        box-shadow: 0 0 200px  black , 0 0 200px  black;
+        background-image: linear-gradient( to bottom , rgb(0, 0, 0), rgb(0, 0, 0));
+      }
+      65% 
+      {
+        box-shadow: 0 0 200px  black , 0 0 200px  black;
+        background-image: linear-gradient( to bottom , rgb(0, 0, 0), rgb(0, 0, 0));
+      }
+
+      72%
+      {
+        box-shadow: 0 0 200px  black , 0 0 200px  black;
+        background-image: linear-gradient( to bottom , rgb(0, 0, 0), rgb(0, 0, 0));
+      }
+
+      86%
+      {
+        box-shadow: 0 200px 200px  wheat , 0 -20px 200px  whitesmoke;
+        background-image: linear-gradient( to bottom , whitesmoke, wheat);
+      }
+
+      100%
+      {
+        box-shadow: 0 200px 200px  wheat , 0 -20px 200px  whitesmoke;
+        background-image: linear-gradient( to bottom , whitesmoke, wheat);
+      }
+
+}
